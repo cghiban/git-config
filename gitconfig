@@ -1,0 +1,40 @@
+[user]
+	name = 
+	email = 
+
+[color]
+	ui = auto
+	pager = true
+
+[alias]
+	# more from
+	# http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
+    co = checkout
+	ci = commit
+	sb = status -sb
+    st = status
+    br = branch
+	df = diff
+	filelog = log -u
+
+    pa = add --patch
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+	log-me = !UN=$(git config user.name)&& git log --author="\"$UN\"" --pretty=format:'%h %cd %s' --date=short
+	log-nice = log --graph --decorate --pretty=oneline --abbrev-commit
+    rlog = reflog
+    type = cat-file -t
+    dump = cat-file -p
+
+[diff]
+	tool = meld
+
+[diftool]
+	prompt = false
+
+[github]
+    user = 
+    token = 
+
